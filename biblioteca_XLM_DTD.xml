@@ -1,5 +1,81 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!DOCTYPE documentos SYSTEM "biblioteca.dtd">
+<!DOCTYPE documentos [
+<!ELEMENT documentos (libros,revistas,periodicos)>
+<!ELEMENT libros (libro+)>
+<!ELEMENT revistas (revista+)>
+<!ELEMENT periodicos (periodico+)>
+
+<!-- elementos de libro-->
+<!ELEMENT libro (titulo, capitulos, indice, sinopsis)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT capitulos (capitulo+)>
+
+<!-- Definimos los atributos de libro-->
+<!ATTLIST libro id ID #REQUIRED>
+<!ATTLIST libro tipo_clase (novela|infantil|didactico) #REQUIRED>
+<!ATTLIST libro pag_lib CDATA #IMPLIED>
+
+<!-- capitulo tiene atributos-->
+<!ATTLIST capitulo nro CDATA #IMPLIED>
+<!ATTLIST capitulo pag_cap CDATA #IMPLIED>
+<!-- capitulo tiene elementos-->
+<!ELEMENT capitulo (titulo_cap, contenido)>
+<!ELEMENT titulo_cap (#PCDATA)>
+<!ELEMENT contenido (#PCDATA)>
+<!-- contenido tiene un atributo-->
+<!ATTLIST contenido url CDATA #IMPLIED>
+<!-- más elementos de libro-->
+<!ELEMENT indice (#PCDATA)>
+<!ELEMENT sinopsis (#PCDATA)>
+
+
+
+
+
+<!-- Definimos los atributos de revista-->
+<!ATTLIST revista id ID #REQUIRED>
+<!ATTLIST revista tipo_clase (informatica | corazon | coches | investigacion | otras) #REQUIRED>
+<!ATTLIST revista pag_rev CDATA #IMPLIED>
+<!-- elementos de revista-->
+<!ELEMENT revista (titulo_rev, numero, indice_rev, secciones)>
+<!ELEMENT titulo_rev (#PCDATA)>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT indice_rev (#PCDATA)>
+<!ELEMENT secciones (seccion+)>
+<!-- seccion tiene atributos-->
+<!ATTLIST seccion pag_sec CDATA #IMPLIED>
+<!-- seccion tiene elementos-->
+<!ELEMENT seccion (contenido_rev)>
+<!ELEMENT contenido_rev (#PCDATA)>
+<!-- contenido tiene un atributo-->
+<!ATTLIST contenido_rev url CDATA #IMPLIED>
+
+
+
+
+<!-- Definimos los atributos de periodico-->
+<!ATTLIST periodico id ID #REQUIRED>
+<!ATTLIST periodico tipo_clase (nacionales | internacionales) #REQUIRED>
+<!ATTLIST periodico fech_pub CDATA #IMPLIED>
+<!-- elementos de periodico-->
+<!ELEMENT periodico (secciones_per, indice_per)>
+<!ELEMENT secciones_per (seccion_per+)>
+<!ELEMENT indice_per (#PCDATA)>
+<!-- seccion tiene atributos-->
+<!ATTLIST seccion_per tipo (economica | opinion | deportes | nacional | internacional) #REQUIRED>
+<!-- seccion tiene elementos-->
+<!ELEMENT seccion_per (articulos)>
+<!ELEMENT articulos (articulo+)>
+<!-- articulo tiene un atributo-->
+<!ATTLIST articulo autor CDATA #IMPLIED>
+<!-- articulo tiene un elemento-->
+<!ELEMENT articulo (contenido_per)>
+<!ELEMENT contenido_per (#PCDATA)>
+<!-- contenido tiene un atributo-->
+<!ATTLIST contenido_per nombre CDATA #IMPLIED>
+
+
+]>
 
 <documentos>
     <libros>
