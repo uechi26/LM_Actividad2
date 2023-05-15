@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<documentos>
+    <libros>
+        <libro id="L0001" tipo_clase="novela" pag_lib="250">
+            <titulo>El verano llego</titulo>
+            <capitulos>
+                <capitulo_1 pag_cap="25">
+                    <titulo></titulo>
+                    <contenido url="#"></contenido>
+                </capitulo_1>
+                <capitulo_2 pag_cap="35">
+                    <titulo></titulo>
+                    <contenido url="#"></contenido>
+                </capitulo_2>
+                <capitulo_3 pag_cap="22">
+                    <titulo></titulo>
+                    <contenido url="#"></contenido>
+                </capitulo_3>
+            </capitulos>
+            <indice></indice>
+            <sinopsis></sinopsis>
+        </libro>
+        <libro id="L0002" tipo_clase="infantil" pag_lib="250">
+        <titulo></titulo>
+        <capitulos>
+            <capitulo_1 pag_cap="25">
+                <titulo></titulo>
+                <contenido url="#"></contenido>
+            </capitulo_1>
+            <capitulo_2 pag_cap="35">
+                <titulo></titulo>
+                <contenido url="#"></contenido>
+            </capitulo_2>
+            <capitulo_3 pag_cap="22">
+                <titulo></titulo>
+                <contenido url="#"></contenido>
+            </capitulo_3>
+        </capitulos>
+        <indice></indice>
+        <sinopsis></sinopsis>
+        </libro>
+            <libro id="L0003" tipo_clase="didactico" pag_lib="250">
+            <titulo></titulo>
+            <capitulos>
+                <capitulo_1 pag_cap="25">
+                    <titulo></titulo>
+                    <contenido url="#"></contenido>
+                </capitulo_1>
+                <capitulo_2 pag_cap="35">
+                    <titulo></titulo>
+                    <contenido url="#"></contenido>
+                </capitulo_2>
+                <capitulo_3 pag_cap="22">
+                    <titulo></titulo>
+                    <contenido url="#"></contenido>
+                </capitulo_3>
+            </capitulos>
+            <indice></indice>
+            <sinopsis></sinopsis>
+        </libro>
+    </libros>
+
+    <revistas>
+        <revista id="R0001" tipo_clase="informatica" pag_rev="60">
+            <titulo></titulo>
+            <numero></numero>
+            <indice></indice>
+            <secciones pag_sec="10">
+                <contenido url="#"></contenido>
+            </secciones>
+        </revista>
+        <revista id="R0002" tipo_clase="corazon" pag_rev="60">
+            <titulo></titulo>
+            <numero></numero>
+            <indice></indice>
+            <secciones pag_sec="10">
+                <contenido url="#"></contenido>
+            </secciones>
+        </revista>
+        <revista id="R0003" tipo_clase="coches" pag_rev="60">
+            <titulo></titulo>
+            <numero></numero>
+            <indice></indice>
+            <secciones pag_sec="10">
+                <contenido url="#"></contenido>
+            </secciones>
+        </revista>
+        <revista id="R0004" tipo_clase="investigacion" pag_rev="60">
+            <titulo></titulo>
+            <numero></numero>
+            <indice></indice>
+            <secciones pag_sec="10">
+                <contenido url="#"></contenido>
+            </secciones>
+        </revista>
+        <revista id="R0005" tipo_clase="otras" pag_rev="60">
+            <titulo></titulo>
+            <numero></numero>
+            <indice></indice>
+            <secciones pag_sec="10">
+                <contenido url="#"></contenido>
+            </secciones>
+        </revista>
+    </revistas>
+
+    <periodicos>
+        <periodico id="P0001" tipo_clase="nacionales" fech_pub="01/05/23">
+            <secciones>
+                <seccion tipo="economica"></seccion>
+                    <articulo autor="">
+                        <contenido nombre=""></contenido>
+                    </articulo> 
+                <seccion tipo="opinion"></seccion>
+                    <articulo autor="">
+                        <contenido nombre=""></contenido>
+                    </articulo> 
+                <seccion tipo="deportes"></seccion>
+                    <articulo autor="">
+                        <contenido nombre=""></contenido>
+                    </articulo> 
+                <seccion tipo="nacional"></seccion>
+                    <articulo autor="">
+                        <contenido nombre=""></contenido>
+                    </articulo> 
+                <seccion tipo="internacional"></seccion>
+                    <articulo autor="">
+                        <contenido nombre=""></contenido>
+                    </articulo> 
+            </secciones>
+            <indice></indice>
+        </periodico>
+    
+    </periodicos>
+</documentos>

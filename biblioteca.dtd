@@ -1,0 +1,22 @@
+<!ELEMENT documentos (libros,revistas,periodicos)>
+
+<!ELEMENT libros (libro+)>
+<!ELEMENT revista (revistas+)>
+<!ELEMENT periodicos (periodico+)>
+
+<!-- Definimos los atributos de libro-->
+<!ATTLIST libros id ID #REQUIRED>
+<!ATTLIST libros tipo_clase (novela | infantil | didactico) #REQUIRED>
+<!ATTLIST libros pag_lib (#PCDATA)>
+<!-- elementos de libro-->
+<!ELEMENT libro (titulo, capitulos,indice, sipnosis)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT capitulos (#PCDATA)>
+<!-- capitulos tiene un atributo-->
+<!ATTLIST capitulo_1 pag_cap (#PCDATA)>
+<!-- capitulos tiene elementos-->
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT contenido (#PCDATA)>
+<!-- más elementos de libros-->
+<!ELEMENT indice (#PCDATA)>
+<!ELEMENT sipnosis (#PCDATA)>
