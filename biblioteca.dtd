@@ -4,22 +4,22 @@
 <!ELEMENT periodicos (periodico+)>
 
 <!-- Definimos los atributos de libro-->
-<!ATTLIST libros id ID #REQUIRED>
-<!ATTLIST libros tipo_clase (novela | infantil | didactico) #REQUIRED>
-<!ATTLIST libros pag_lib CDATA >
+<!ATTLIST libro id ID #REQUIRED>
+<!ATTLIST libro tipo_clase (novela | infantil | didactico) #REQUIRED>
+<!ATTLIST libro pag_lib CDATA >
 <!-- elementos de libro-->
 <!ELEMENT libro (titulo, capitulos, indice, sipnosis)>
 <!ELEMENT titulo (#PCDATA)>
 <!ELEMENT capitulos (capitulo+)>
 <!-- capitulo tiene atributos-->
-<!ATTLIST capitulo nro(#PCDATA)>
-<!ATTLIST capitulo pag_cap (#PCDATA)>
+<!ATTLIST capitulo nro CDATA>
+<!ATTLIST capitulo pag_cap CDATA>
 <!-- capitulo tiene elementos-->
 <!ELEMENT capitulo (titulo, contenido)>
 <!ELEMENT titulo (#PCDATA)>
 <!ELEMENT contenido (#PCDATA)>
 <!-- contenido tiene un atributo-->
-<!ATTLIST contenido url (#PCDATA)>
+<!ATTLIST contenido url CDATA>
 <!-- más elementos de libro-->
 <!ELEMENT indice (#PCDATA)>
 <!ELEMENT sipnosis (#PCDATA)>
@@ -27,7 +27,7 @@
 <!-- Definimos los atributos de revista-->
 <!ATTLIST revista id ID #REQUIRED>
 <!ATTLIST revista tipo_clase (informatica | corazon | coches | investigacion | otras) #REQUIRED>
-<!ATTLIST revista pag_rev (#PCDATA)>
+<!ATTLIST revista pag_rev CDATA>
 <!-- elementos de revista-->
 <!ELEMENT revista (titulo, numero, indice, secciones)>
 <!ELEMENT titulo (#PCDATA)>
@@ -35,17 +35,17 @@
 <!ELEMENT indice (#PCDATA)>
 <!ELEMENT secciones (seccion+)>
 <!-- seccion tiene atributos-->
-<!ATTLIST seccion pag_cap (#PCDATA)>
+<!ATTLIST seccion pag_cap CDATA>
 <!-- seccion tiene elementos-->
 <!ELEMENT seccion (contenido)>
 <!ELEMENT contenido (#PCDATA)>
 <!-- contenido tiene un atributo-->
-<!ATTLIST contenido url (#PCDATA)>
+<!ATTLIST contenido url CDATA>
 
 <!-- Definimos los atributos de periodico-->
 <!ATTLIST periodico id ID #REQUIRED>
 <!ATTLIST periodico tipo_clase (nacionales | internacionales) #REQUIRED>
-<!ATTLIST periodico fech_pub (#PCDATA)>
+<!ATTLIST periodico fech_pub CDATA>
 <!-- elementos de periodico-->
 <!ELEMENT periodico (secciones, indice)>
 <!ELEMENT secciones (seccion+))>
@@ -56,9 +56,9 @@
 <!ELEMENT seccion (articulos)>
 <!ELEMENT articulos (articulo+)>
 <!-- articulo tiene un atributo-->
-<!ATTLIST articulo autor (#PCDATA)>
+<!ATTLIST articulo autor CDATA>
 <!-- articulo tiene un elemento-->
 <!ELEMENT articulo (contenido)>
 <!ELEMENT contenido (#PCDATA)>
 <!-- contenido tiene un atributo-->
-<!ATTLIST contenido nombre (#PCDATA)>
+<!ATTLIST contenido nombre CDATA>
