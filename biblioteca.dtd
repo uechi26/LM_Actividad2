@@ -9,14 +9,57 @@
 <!ATTLIST libros tipo_clase (novela | infantil | didactico) #REQUIRED>
 <!ATTLIST libros pag_lib (#PCDATA)>
 <!-- elementos de libro-->
-<!ELEMENT libro (titulo, capitulos,indice, sipnosis)>
+<!ELEMENT libro (titulo, capitulos, indice, sipnosis)>
 <!ELEMENT titulo (#PCDATA)>
-<!ELEMENT capitulos (#PCDATA)>
-<!-- capitulos tiene un atributo-->
-<!ATTLIST capitulo_1 pag_cap (#PCDATA)>
-<!-- capitulos tiene elementos-->
+<!ELEMENT capitulos (capitulo+)>
+<!-- capitulo tiene atributos-->
+<!ATTLIST capitulo nro(#PCDATA)>
+<!ATTLIST capitulo pag_cap (#PCDATA)>
+<!-- capitulo tiene elementos-->
+<!ELEMENT capitulo (titulo, contenido)>
 <!ELEMENT titulo (#PCDATA)>
 <!ELEMENT contenido (#PCDATA)>
-<!-- más elementos de libros-->
+<!-- contenido tiene un atributo-->
+<!ATTLIST contenido url (#PCDATA)>
+<!-- más elementos de libro-->
 <!ELEMENT indice (#PCDATA)>
 <!ELEMENT sipnosis (#PCDATA)>
+
+<!-- Definimos los atributos de revista-->
+<!ATTLIST revista id ID #REQUIRED>
+<!ATTLIST revista tipo_clase (informatica | corazon | coches | investigacion | otras) #REQUIRED>
+<!ATTLIST revista pag_rev (#PCDATA)>
+<!-- elementos de revista-->
+<!ELEMENT revista (titulo, numero, indice, secciones)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT indice (#PCDATA)>
+<!ELEMENT secciones (seccion+)>
+<!-- seccion tiene atributos-->
+<!ATTLIST seccion pag_cap (#PCDATA)>
+<!-- seccion tiene elementos-->
+<!ELEMENT seccion (contenido)>
+<!ELEMENT contenido (#PCDATA)>
+<!-- contenido tiene un atributo-->
+<!ATTLIST contenido url (#PCDATA)>
+
+<!-- Definimos los atributos de periodico-->
+<!ATTLIST periodico id ID #REQUIRED>
+<!ATTLIST periodico tipo_clase (nacionales | internacionales) #REQUIRED>
+<!ATTLIST periodico fech_pub (#PCDATA)>
+<!-- elementos de periodico-->
+<!ELEMENT periodico (secciones, indice)>
+<!ELEMENT secciones (seccion+))>
+<!ELEMENT indice (#PCDATA)>
+<!-- seccion tiene atributos-->
+<!ATTLIST seccion tipo(economica | opinion | deportes | nacional | internacional) #REQUIRED>
+<!-- seccion tiene elementos-->
+<!ELEMENT seccion (articulos)>
+<!ELEMENT articulos (articulo+)>
+<!-- articulo tiene un atributo-->
+<!ATTLIST articulo autor (#PCDATA)>
+<!-- articulo tiene un elemento-->
+<!ELEMENT articulo (contenido)>
+<!ELEMENT contenido (#PCDATA)>
+<!-- contenido tiene un atributo-->
+<!ATTLIST contenido nombre (#PCDATA)>
